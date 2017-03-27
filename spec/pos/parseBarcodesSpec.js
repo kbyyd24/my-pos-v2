@@ -1,5 +1,5 @@
 describe('parse barcodes', () => {
-  it('should return unContedBarcodes with count as 1 when given barcodes without count', () => {
+  it('should return unContedBarcodes without split char when given barcodes without count', () => {
     let barcodes = [
       'ITEM000001',
       'ITEM000003',
@@ -13,7 +13,7 @@ describe('parse barcodes', () => {
     let unCountedBarcodes = parseBarcodes(barcodes);
     expect(unCountedBarcodes).toEqual(expectResult);
   });
-  it('should return unCountedBarcodes when given barcodes with count', () => {
+  it('should return unCountedBarcodes with split char when given barcodes with count', () => {
     let barcodes = [
       'ITEM00001-2',
       'ITEM00003-3.2'
