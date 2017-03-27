@@ -35,7 +35,7 @@ describe('compute all price', () => {
   it('should return order with savePrice is not 0 when given a cartItems with any goods has promotion', () => {
     const cartItems = [
       {price: 3.00, count: 5, promotion: 'BUY_TWO_GET_ONE_FREE'},
-      {price: 15.00, count: 4, promotion: ''},
+      {price: 15.00, count: 1, promotion: ''},
       {price: 4.50, count: 2.3, promotion: 'BUY_TWO_GET_ONE_FREE'}
     ];
     const expectOrder = {
@@ -61,10 +61,12 @@ describe('compute all price', () => {
         name: undefined,
         unit: undefined
       }],
-      savePrice: 0,
-      sumPrice: 18.00
+      savePrice: 3.00,
+      sumPrice: 37.35
     };
     const order = computeAllPrice(cartItems);
+    console.log(order)
+    console.log(expectOrder)
     expect(order).toEqual(expectOrder);
   });
 });
