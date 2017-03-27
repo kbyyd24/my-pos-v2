@@ -8,4 +8,9 @@ describe('map tags to barcodes with count', () => {
     const expectCountedBarcode = [{barcode: 'ITEM00001', count: 1}];
     expect(mapTagsToCountedBarcodes(tags)).toEqual(expectCountedBarcode);
   });
+  it('should return countedBarcodes when given tag with delimiter', function () {
+    const tags = ['ITEM00001-4'];
+    const expectCountedBarcode = [{barcode: 'ITEM00001', count: 4}];
+    expect(mapTagsToCountedBarcodes(tags)).toEqual(expectCountedBarcode);
+  });
 });
