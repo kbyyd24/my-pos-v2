@@ -12,10 +12,7 @@ describe('count barcodes', () => {
       {barcode: 'ITEM00005', count: 1}
     ];
     const countedBarcodes = countBarcodes(noRepeatBarcode);
-    for (let i = 0; i < countedBarcodes.length; i++) {
-      expect(countedBarcodes[i].barcode).toEqual(expectCountedBarcodes[i].barcode);
-      expect(countedBarcodes[i].count).toEqual(expectCountedBarcodes[i].count);
-    }
+    expect(countedBarcodes).toEqual(expectCountedBarcodes);
   });
   it('should return countedBarcodes when given unCountedBarcodes with repeat barcodes', () => {
     const repeatBarcode = [
@@ -30,9 +27,6 @@ describe('count barcodes', () => {
       {barcode: 'ITEM00005', count: 1}
     ];
     const countedBarcodes = countBarcodes(repeatBarcode);
-    for (let i = 0; i < countedBarcodes.length; i++) {
-      expect(countedBarcodes[i].barcode).toEqual(expectCountedBarcodes[i].barcode);
-      expect(countedBarcodes[i].count).toEqual(expectCountedBarcodes[i].count);
-    }
+    expect(countedBarcodes).toEqual(expectCountedBarcodes);
   })
 });
