@@ -27,6 +27,9 @@ describe('parse barcodes', () => {
       {barcode: 'ITEM00003', count: 3.2}
     ];
     let unCountedBarcodes = parseBarcodes(barcodes);
-    expect(unCountedBarcodes).toEqual(expectResult);
+    for (let i = 0; i < unCountedBarcodes.length; i++) {
+      expect(unCountedBarcodes[i].barcode).toEqual(expectResult[i].barcode);
+      expect(unCountedBarcodes[i].count).toEqual(expectResult[i].count);
+    }
   })
 });
