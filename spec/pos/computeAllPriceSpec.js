@@ -65,8 +65,6 @@ describe('compute all price', () => {
       sumPrice: 37.35
     };
     const order = computeAllPrice(cartItems);
-    console.log(order)
-    console.log(expectOrder)
     expect(order).toEqual(expectOrder);
   });
 });
