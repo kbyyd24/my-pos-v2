@@ -10,7 +10,7 @@ describe('parse barcodes', () => {
       {barcode: 'ITEM00001', count: 1},
       {barcode: 'ITEM00003', count: 1},
       {barcode: 'ITEM00005', count: 1}
-    ]
+    ];
     let unCountedBarcodes = parseBarcodes(barcodes);
     for (let i = 0; i < unCountedBarcodes.length; i++) {
       expect(unCountedBarcodes[i].barcode).toEqual(expectResult[i].barcode);
