@@ -1,4 +1,5 @@
 describe('print receipt', () => {
+  const printReceipt = require('../../lib/pos/printReceipt');
   it('should print ticket when given tags', () => {
     const tags = [
       'ITEM000001',
