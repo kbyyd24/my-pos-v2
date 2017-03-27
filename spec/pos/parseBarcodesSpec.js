@@ -12,10 +12,7 @@ describe('parse barcodes', () => {
       {barcode: 'ITEM00005', count: 1}
     ];
     let unCountedBarcodes = parseBarcodes(barcodes);
-    for (let i = 0; i < unCountedBarcodes.length; i++) {
-      expect(unCountedBarcodes[i].barcode).toEqual(expectResult[i].barcode);
-      expect(unCountedBarcodes[i].count).toEqual(expectResult[i].count);
-    }
+    expect(unCountedBarcodes).toEqual(expectResult);
   });
   it('should return unCountedBarcodes with split char when given barcodes with count', () => {
     let barcodes = [
@@ -27,9 +24,6 @@ describe('parse barcodes', () => {
       {barcode: 'ITEM00003', count: 3.2}
     ];
     let unCountedBarcodes = parseBarcodes(barcodes);
-    for (let i = 0; i < unCountedBarcodes.length; i++) {
-      expect(unCountedBarcodes[i].barcode).toEqual(expectResult[i].barcode);
-      expect(unCountedBarcodes[i].count).toEqual(expectResult[i].count);
-    }
+    expect(unCountedBarcodes).toEqual(expectResult);
   })
 });
