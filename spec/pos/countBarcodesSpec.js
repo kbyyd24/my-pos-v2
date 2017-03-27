@@ -1,5 +1,5 @@
 describe('count barcodes', () => {
-  let countBarcodes = require('../../lib/pos/countBarcodes');
+  const countBarcodes = require('../../lib/pos/countBarcodes');
   it('should return countedBarcodes when given unCountedBarcodes without repeat barcode', () => {
     const noRepeatBarcode = [
       {barcode: 'ITEM00001', count: 1},
