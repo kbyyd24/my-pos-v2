@@ -1,10 +1,5 @@
 describe('compute all price', () => {
   const computeAllPrice = require('../../lib/pos/computeAllPrice');
-  it('should rentur order without price when given an empty cartItems', () => {
-    const expectOrder = {orderItems: [], savePrice: 0, sumPrice: 0};
-    const order = computeAllPrice([]);
-    expect(order).toEqual(expectOrder);
-  });
   it('should return order with savePrice is 0 when given a cartItems without any goods has promotion', () => {
     const cartItems = [
       {price: 3.00, count: 1, promotion: 'BUY_TWO_GET_ONE_FREE'},
