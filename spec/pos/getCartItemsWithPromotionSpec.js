@@ -1,9 +1,5 @@
 describe('get cart items this promotion info', () => {
   let getCartItemsWithPromotion = require('../../lib/pos/getCartItemsWithPromotion');
-  it('should return empty array when given an empty CartItems array', () => {
-    const cartItemsWithPromotion = getCartItemsWithPromotion([]);
-    expect(cartItemsWithPromotion).toEqual([]);
-  });
   it('should return cartItemsWithPromotion when given a CartItems array', () => {
     const cartItems = [
       {name: '雪碧', price: 3.00, unit: '瓶', barcode: 'ITEM000001', count: 5},

@@ -1,9 +1,5 @@
 describe('get cart items', () => {
   let getCartItems = require('../../lib/pos/getCartItems');
-  it('should return empty array when given empty countedBarcodes array', () => {
-    let cartItems = getCartItems([]);
-    expect(cartItems).toEqual([]);
-  });
   it('should return items info when given countedBarcodes', () => {
     let countedBarcodes = [
       {barcode: 'ITEM00001', count: 5},
